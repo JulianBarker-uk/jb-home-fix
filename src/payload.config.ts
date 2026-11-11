@@ -65,10 +65,7 @@ export default buildConfig({
     },
   }),
   collections: [Pages, Posts, Media, Categories, Users],
-  // cors: [getServerSideURL()].filter(Boolean),
-  // csrf: [getServerSideURL()].filter(Boolean),
-  cors: ['http://localhost:3000', 'https://jb-home-fix.vercel.app/'],
-  csrf: ['http://localhost:3000', 'https://jb-home-fix.vercel.app/'],
+  cors: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
   plugins: [
     ...plugins,
