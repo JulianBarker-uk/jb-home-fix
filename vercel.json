@@ -18,9 +18,9 @@
   ],
   "headers": [
     {
-      "source": "https://vercel.com/api/blob/(.*)",
+      "source": "https://jb-home-fgqpzs0t0-barkers2.vercel.app/(.*)",
       "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "https://localhost:3000/" },
+        { "key": "Access-Control-Allow-Origin", "value": "https://vercel.com/" },
         { "key": "Access-Control-Allow-Methods", "value": "GET, POST, OPTIONS" },
         { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" },
         { "key": "Access-Control-Allow-Credentials", "value": "true" }
