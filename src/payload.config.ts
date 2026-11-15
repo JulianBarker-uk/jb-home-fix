@@ -72,11 +72,11 @@ export default buildConfig({
   plugins: [
     ...plugins,
     vercelBlobStorage({
-      enabled: true, // Optional, defaults to true
+      enabled: true,
       collections: {
-        media: true, // Must match your collection slug
+        media: true,
       },
-      token: process.env.BLOB_READ_WRITE_TOKEN, // Injected by Vercel
+      token: process.env.BLOB_READ_WRITE_TOKEN,
       clientUploads: true,
     }),
   ],
