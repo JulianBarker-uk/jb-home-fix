@@ -11,6 +11,7 @@ import {
   UnorderedListFeature,
   OrderedListFeature,
   UploadFeature,
+  TreeViewFeature,
   type LinkFields,
 } from '@payloadcms/richtext-lexical'
 
@@ -25,6 +26,7 @@ export const defaultLexical = lexicalEditor({
     UnorderedListFeature(),
     OrderedListFeature(),
     UploadFeature(),
+    TreeViewFeature(),
     LinkFeature({
       enabledCollections: ['pages', 'posts'],
       fields: ({ defaultFields }) => {
