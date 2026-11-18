@@ -22,7 +22,7 @@ export const Logo = (props: Props) => {
       loading={loading}
       fetchPriority={priority}
       decoding="async"
-      className={clsx('', className)}
+      className={clsx('max-w-[9.375rem] w-full h-[34px]', className)}
       src="https://yvnxcpwfzwfavbio.public.blob.vercel-storage.com/JBHomeFix-logo-trans-1.gif"
     />
   )
