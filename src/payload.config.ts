@@ -66,21 +66,20 @@ export default buildConfig({
   }),
   collections: [Pages, Posts, Media, Categories, Users],
   //cors: [getServerSideURL()].filter(Boolean),
-  cors: [getServerSideURL(), "https://jb-home-fix.vercel.app/", "https://vercel.com/"].filter(Boolean),
+  cors: [getServerSideURL(), "https://jb-home-fix.vercel.app/", "https://https://vercel.com/", "https://jb-homefix.co.uk" ].filter(Boolean),
   csrf: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
   plugins: [
     ...plugins,
     vercelBlobStorage({
-      enabled: true,
       collections: {
         media: true,
       },
-      token: process.env.BLOB_READ_WRITE_TOKEN,
+      token: process.env.BLOB_READ_WRITE_TOKEN || '',
       clientUploads: true,
     }),
   ],
-  secret: (process.env.PAYLOAD_SECRET = 'thhhh'),
+  secret: process.env.PAYLOAD_SECRET,
   sharp,
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
