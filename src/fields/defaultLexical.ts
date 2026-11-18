@@ -17,10 +17,10 @@ import {
 
 export const defaultLexical = lexicalEditor({
   features: [
-    UnderlineFeature(),
-    ParagraphFeature(),
     BoldFeature(),
     ItalicFeature(),
+    UnderlineFeature(),
+    ParagraphFeature(),
     AlignFeature(),
     IndentFeature(),
     UnorderedListFeature(),
