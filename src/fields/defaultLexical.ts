@@ -17,8 +17,8 @@ import {
 
 export const defaultLexical = lexicalEditor({
   features: [
-    ParagraphFeature(),
     UnderlineFeature(),
+    ParagraphFeature(),
     BoldFeature(),
     ItalicFeature(),
     AlignFeature(),
