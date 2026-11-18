@@ -26,7 +26,6 @@ export const defaultLexical = lexicalEditor({
     IndentFeature(),
     UnorderedListFeature(),
     OrderedListFeature(),
-    TreeViewFeature(),
     LinkFeature({
       enabledCollections: ['pages', 'posts'],
       fields: ({ defaultFields }) => {
