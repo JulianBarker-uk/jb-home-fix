@@ -17,10 +17,12 @@ export const Logo = (props: Props) => {
     /* eslint-disable @next/next/no-img-element */
     <img
       alt="JB HomeFix Logo"
+      width={130}
       height={34}
       loading={loading}
       fetchPriority={priority}
       decoding="async"
+      //className={clsx('max-w-[9.375rem] w-full h-[34px]', className)}
       src="https://yvnxcpwfzwfavbio.public.blob.vercel-storage.com/JBHomeFix-logo-trans-1.gif"
     />
   )
