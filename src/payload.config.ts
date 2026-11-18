@@ -15,6 +15,7 @@ import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
+import { nestedDocsPlugin } from '@payloadcms/plugin-nested-docs'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -77,6 +78,13 @@ export default buildConfig({
       },
       token: process.env.BLOB_READ_WRITE_TOKEN || '',
       clientUploads: true,
+    })
+    ,
+    nestedDocsPlugin({
+      collections: ['pages'],
+      generateLabel: (_, doc) => String(doc.title),
+      generateURL: (docs) =>
+        docs.reduce((url, doc) => `${url}/${String(doc.slug)}`, ''),
     }),
   ],
   secret: process.env.PAYLOAD_SECRET,
