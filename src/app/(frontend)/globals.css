@@ -87,12 +87,13 @@
 }
 
 :root {
+  --color-text:oklch(20.5% 0 none);
   --background: oklch(100% 0 0deg);
-  --foreground: oklch(14.5% 0 0deg);
+  --foreground: oklch(20.5% 0 none);
   --card: oklch(96.5% 0.005 265deg);
-  --card-foreground: oklch(14.5% 0 0deg);
+  --card-foreground: oklch(20.5% 0 none);
   --popover: oklch(100% 0 0deg);
-  --popover-foreground: oklch(14.5% 0 0deg);
+  --popover-foreground: oklch(20.5% 0 none);
   --primary: oklch(20.5% 0 0deg);
   --primary-foreground: oklch(98.5% 0 0deg);
   --secondary: oklch(97% 0 0deg);
@@ -218,7 +219,8 @@ html {
   opacity: 0;
 }
 
-html[data-theme='dark'],
-html[data-theme='light'] {
+
+html[data-theme='light'],
+html[data-theme='dark'] {
   opacity: initial;
 }
