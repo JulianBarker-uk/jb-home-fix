@@ -79,13 +79,13 @@ export default buildConfig({
       token: process.env.BLOB_READ_WRITE_TOKEN || '',
       clientUploads: true,
     })
-    // ,
-    // nestedDocsPlugin({
-    //   collections: ['pages'],
-    //   generateLabel: (_, doc) => String(doc.title),
-    //   generateURL: (docs) =>
-    //     docs.reduce((url, doc) => `${url}/${String(doc.slug)}`, ''),
-    // }),
+    ,
+     nestedDocsPlugin({
+       collections: ['pages'],
+       generateLabel: (_, doc) => String(doc.title),
+       generateURL: (docs) =>
+         docs.reduce((url, doc) => `${url}/${String(doc.slug)}`, ''),
+     }),
   ],
   secret: process.env.PAYLOAD_SECRET,
   sharp,
